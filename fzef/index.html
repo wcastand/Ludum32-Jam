@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Lightmare</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" src="build/phaser.min.js"></script>
+  <script type="text/javascript" src="scripts/settings.js"></script>
+  <script type="text/javascript" src="scripts/Boot.js"></script>
+  <script type="text/javascript" src="scripts/Preloader.js"></script>
+  <script type="text/javascript" src="scripts/MainMenu.js"></script>
+  <script type="text/javascript" src="scripts/Game.js"></script>
+  <!-- Modules -->
+  <script type="text/javascript" src="scripts/modules/player.js"></script>
+  <script type="text/javascript" src="scripts/modules/enemies.js"></script>
+  <script type="text/javascript" src="scripts/modules/light.js"></script>
+  <script type="text/javascript" src="scripts/modules/traps.js"></script>
+  <script type="text/javascript" src="scripts/modules/platforms.js"></script>
+  <script type="text/javascript" src="scripts/modules/touchcontrol.js"></script>
+</head>
+<body>
+  <div id="world"></div>
+  <script type="text/javascript">
+    window.onload = function() {
+      var game = new Phaser.Game(800, 450, Phaser.AUTO, 'world');
+      game.state.add('Boot', Lightmare.Boot);
+      game.state.add('Preloader', Lightmare.Preloader);
+      game.state.add('MainMenu', Lightmare.MainMenu);
+      game.state.add('Game', Lightmare.Game);
+      game.state.start('Boot');
+    };
+  </script>
+</body>
+</html>

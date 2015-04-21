@@ -1,0 +1,39 @@
+body{
+  padding: 0;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  background-color: black;
+  color:  #f1f1f1;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  font-family:  helvetica, sans-serif;
+  font-size:  14px;
+  line-height: 1.5;
+}
+#world{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+canvas{
+  margin: 0 auto;
+  min-width: 800px;
+  margin-left: auto!important;
+}
